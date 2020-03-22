@@ -25,5 +25,5 @@ jobs:
     - name: Upload data.json
       uses: actions/upload-artifact@v1
       with:
-        name: data/data.json
-        path: data/data.json
+        name: data
+        path: ./data
