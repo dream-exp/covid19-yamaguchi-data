@@ -2,7 +2,7 @@ name: Python application
 
 on:
   schedule:
-    - cron:  '38 07 * * *'
+    - cron:  '59 07 * * *'
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
     - name: Run script
       run: |
         python data_update.py
-    - name: Upload data.json
+    - name: Upload data files
       uses: actions/upload-artifact@v1
       with:
         name: data
