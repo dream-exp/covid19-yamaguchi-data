@@ -21,7 +21,7 @@ jobs:
         pip install -r requirements.txt
     - name: Run script
       run: |
-        python date_update.py
+        python data_update.py
 #     - name: deploy
 #       uses: peaceiris/actions-gh-pages@v3
 #       with:
