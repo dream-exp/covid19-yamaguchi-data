@@ -67,8 +67,8 @@ def get_timestamp(s): # その記事内のタイムスタンプを返す、現�
     return time_stamp
 
 # 現在のdata.jsonをバックアップしてdata_template.jsonに保存する
-template = import_json("data.json")
-export_json(obj=template, filename="./data_template.json")
+template = import_json("./data/data.json")
+export_json(obj=template, filename="./data/data_template.json")
 
 # 報道発表ページで「新型コロナウイルス感染症にかかる」で検索した際の結果を利用
 res = requests.get("https://webnavi.pref.yamaguchi.lg.jp/press/?q=%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E3%81%AB%E3%81%8B%E3%81%8B%E3%82%8B")
@@ -146,4 +146,4 @@ template['inspections_summary']['date'] = last_update_date
 template['inspections_summary']['data'] = inspection_summary
 
 # jsonファイルに出力
-export_json(obj=template, filename="./data.json")
+export_json(obj=template, filename="./data/data.json")
